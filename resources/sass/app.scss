@@ -1,0 +1,195 @@
+@import '~bootstrap/scss/bootstrap';
+@import '/resources/css/about.css';
+@import '/resources/css/template.css';
+@import '/resources/css/dashboard.css';
+@import '/resources/css/sb-admin-2.css';
+@import '/resources/css/sb-admin-2.min.css';
+@import url("https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css");
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+$purple: #7D4EF2;
+$blue: #51A9FC;
+$blue1: #557AE6;
+
+$custom-colors: (
+  "purple2": $purple
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text: map-merge($utilities-text, $utilities-colors);
+$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text");
+$utilities-bg: map-merge($utilities-bg, $utilities-colors);
+$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
+
+
+
+@import 'bootstrap';
+
+
+// style
+
+.landingPage .card {
+  border-radius: 8px !important;
+  border-color: $purple  !important;
+}
+
+/* Solid border */
+hr.solid-header2 {
+  width: 239px;
+  height: 15px;
+  left: 376px;
+  top: 1182px;
+  background: $blue;
+  margin-top: -25px !important;
+  margin-left: 42px !important;
+  opacity: 100% !important;
+}
+
+hr.solid-header3{
+  width: 89px !important;
+  height: 6px !important;
+  left: 376px;
+  top: 1182px;
+  background: $blue;
+  margin-top: -24px !important;
+  margin-left: 115px !important;
+  opacity: 100% !important;
+}
+
+h5.card-title:after {
+    width: 239px;
+    height: 15px;
+    left: 376px;
+    top: 1182px;
+    background: $blue;
+  }
+
+.landingPage .card-title-package{
+  // font-family: ;
+  font-size: 36px !important;
+  font-weight: 600 !important;
+}
+
+.landingPage .card-content{
+  font-size: 18px !important;
+}
+
+.radius-bitind{
+  border-radius: 8px !important;
+}
+
+.radius-template{
+  border-radius: 15px !important;
+}
+
+.color-border {
+  -webkit-appearance: none;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  height: 20px;
+
+}
+
+.color-border::-webkit-color-swatch {
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.color-border::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+}
+
+$carousel-control-color: $white;
+$carousel-control-width: 15%;
+$carousel-control-opacity: .5;
+$carousel-control-hover-opacity: .9;
+$carousel-control-transition: opacity .15s ease;
+
+$carousel-indicator-width: 30px;
+$carousel-indicator-height: 3px;
+$carousel-indicator-hit-area-height: 10px;
+$carousel-indicator-spacer: 3px;
+$carousel-indicator-opacity: .5;
+$carousel-indicator-active-bg: $white;
+$carousel-indicator-active-opacity: 1;
+$carousel-indicator-transition: opacity .6s ease;
+
+$carousel-caption-width: 70%;
+$carousel-caption-color: $white;
+$carousel-caption-padding-y: 1.25rem;
+$carousel-caption-spacer: 1.25rem;
+
+$carousel-control-icon-width: 2rem;
+
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+
+$carousel-transition-duration: .6s;
+$carousel-transition: transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+
+$carousel-dark-indicator-active-bg: $black;
+$carousel-dark-caption-color: $black;
+$carousel-dark-control-icon-filter: invert(1) grayscale(100);
+
+.carousel-inner {
+  padding: 1em;
+}
+
+.card2 {
+  margin: 0 0.5em !important;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18) !important;
+  border: none !important;
+  border-radius: 4px !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 33.333333%;
+    display: block;
+  }
+
+  .carousel-inner {
+    display: flex;
+  }
+}
+
+.card .img-wrapper {
+  max-width: 100%;
+  height: 13em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  max-height: 100%;
+}
+
+@media (max-width: 767px) {
+  .card .img-wrapper {
+    height: 17em;
+  }
+}
